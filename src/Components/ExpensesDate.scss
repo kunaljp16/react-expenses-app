@@ -1,4 +1,9 @@
+@import "./../stylesheets/color-pallets.scss";
+
 .expenses-date {
   flex-direction: column;
   text-align: center;
+  background-color: $navy-blue;
+  padding: 10px;
+  width: 100px;
 }
