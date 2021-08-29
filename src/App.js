@@ -1,5 +1,5 @@
 import expensesData from "../src/MockData/expenses-data";
-import Expenses from "./Components/Expenses";
+import Expenses from "./Components/Expenses/Expenses";
 
 import "./App.scss";
 

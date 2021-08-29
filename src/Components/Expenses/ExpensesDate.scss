@@ -1,4 +1,4 @@
-@import "./../stylesheets/color-pallets.scss";
+@import "./../../stylesheets/color-pallets.scss";
 
 .expenses-date {
   flex-direction: column;
@@ -6,4 +6,5 @@
   background-color: $navy-blue;
   padding: 10px;
   width: 100px;
+  color: $white;
 }

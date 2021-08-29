@@ -1,5 +1,5 @@
-import "./ExpensesDate.scss";
-import CustomCard from "./CustomCard";
+import "./../Expenses/ExpensesDate.scss";
+import CustomCard from "./../UI/CustomCard";
 
 function ExpensesDate(props) {
   const month = props.date.toLocaleString("en-US", { month: "long" });
