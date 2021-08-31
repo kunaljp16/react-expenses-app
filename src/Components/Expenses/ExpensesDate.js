@@ -6,7 +6,7 @@ function ExpensesDate(props) {
   const day = props.date.toLocaleString("en-us", { day: "2-digit" });
   const year = props.date.getFullYear();
   return (
-    <CustomCard className="d-flex expenses-date">
+    <CustomCard className="d-flex expenses-date bg-secondary">
       <span>{month}</span>
       <span>{day}</span>
       <span>{year}</span>

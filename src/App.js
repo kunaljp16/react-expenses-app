@@ -1,6 +1,6 @@
 import expensesData from "../src/MockData/expenses-data";
 import Expenses from "./Components/Expenses/Expenses";
-
+import NewExpense from "./Components/NewExpense/NewExpense";
 import "./App.scss";
 
 function App() {
@@ -8,7 +8,8 @@ function App() {
   return (
     <div className="container">
       <h1>This is a React Expenses App</h1>
-      <Expenses item={expenses}/>
+      <NewExpense />
+      <Expenses item={expenses} />
     </div>
   );
 }
