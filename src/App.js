@@ -5,10 +5,17 @@ import "./App.scss";
 
 function App() {
   let expenses = expensesData;
+  const newExpenseData = (newExpenseDataPassed) => {
+    console.log(newExpenseDataPassed);
+    return {
+      ...newExpenseDataPassed,
+    };
+  };
+  console.log(newExpenseData);
   return (
     <div className="container">
       <h1>This is a React Expenses App</h1>
-      <NewExpense />
+      <NewExpense onSaveExpense={newExpenseData} />
       <Expenses item={expenses} />
     </div>
   );
