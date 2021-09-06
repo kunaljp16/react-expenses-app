@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./ExpenseForm.scss";
 
 const ExpenseForm = (props) => {
-  const [enteredTitle, setEnteredTitle] = useState("");
-  const [enteredAmount, setEnteredAmount] = useState("");
-  const [enteredDate, setEnteredDate] = useState("");
+  const [title, setEnteredTitle] = useState("");
+  const [amount, setEnteredAmount] = useState("");
+  const [date, setEnteredDate] = useState("");
 
   // const [userInput, setUserInput] = useState({
   //   enteredTitle: "",
@@ -31,7 +31,15 @@ const ExpenseForm = (props) => {
     // });
   };
   const dateChangeHandler = (event) => {
-    setEnteredDate(event.target.value);
+
+    const newDate = (event.target.value).split('-');
+    
+    const yyyy = parseInt(newDate[0]);
+    const mm = parseInt(newDate[1]);
+    const dd = parseInt(newDate[2]); 
+    const updatedDate = new Date(yyyy, mm, dd);
+
+    setEnteredDate(updatedDate);
     // setUserInput((prevState) => {
     //   return {
     //     ...prevState,
@@ -43,9 +51,9 @@ const ExpenseForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     const expenseData = {
-      enteredTitle: enteredTitle,
-      enteredAmount: enteredDate,
-      enteredDate: enteredAmount,
+      title: title,
+      amount: amount,
+      date: date,
     };
     console.log("expenseData =" + expenseData);
     props.onExpensesSave(expenseData);
@@ -61,7 +69,7 @@ const ExpenseForm = (props) => {
         <div className="">
           <label>Title</label>
           <input
-            value={enteredTitle}
+            value={title}
             onChange={titleChangeHandler}
             type="text"
           />
@@ -73,7 +81,7 @@ const ExpenseForm = (props) => {
             type="number"
             min="0.01"
             step="0.01"
-            value={enteredAmount}
+            value={amount}
           />
         </div>
         <div className="">
@@ -83,7 +91,7 @@ const ExpenseForm = (props) => {
             type="date"
             min="2019-01-01"
             max="2022-12-31"
-            value={enteredDate}
+            value={date}
           />
         </div>
       </div>
