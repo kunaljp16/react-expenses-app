@@ -13,13 +13,15 @@ function App() {
       return [...prevData, expenses]
     });
   }
+
+
   
 
   return (
     <div className="container">
       <h1>This is a React Expenses App</h1>
       <NewExpense onAddExpenses={addExpenseHandler} />
-      <Expenses item={expenses} />
+      <Expenses items={expenses} />
     </div>
   );
 }
