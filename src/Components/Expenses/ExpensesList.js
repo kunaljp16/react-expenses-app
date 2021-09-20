@@ -11,7 +11,7 @@ const ExpensesList = (props) => {
   }
 
   return (
-    <ul>
+    <ul className='list-group'>
       {props.items.map((expense) => (
         <ExpenseItem
           key={expense.id}
@@ -22,6 +22,8 @@ const ExpensesList = (props) => {
       ))}
     </ul>
   );
+
+
 };
 
 export default ExpensesList;

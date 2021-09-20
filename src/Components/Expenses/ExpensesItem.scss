@@ -1,5 +1,8 @@
 @import "./../../stylesheets/color-pallets.scss";
 
+li {
+  list-style-type: none;
+}
 .expenses-item {
   padding: 20px;
   margin: 0 0 10px 0;
